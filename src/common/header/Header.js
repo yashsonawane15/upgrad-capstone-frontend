@@ -1,3 +1,4 @@
+import { Button, Grid } from '@material-ui/core';
 import React from 'react';
 import logo from '../../assets/logo.jpeg';
 import './Header.css';
@@ -5,12 +6,21 @@ import './Header.css';
 const Header = () => {
 
     return (
-        <div className="header">
-            <div className = "logo">
-                <img src={logo} alt="why?"/>
-            </div>
+        <Grid className={"header"} direction={"row"}>
+            <Grid item container>
+                <Grid item className = "logo">
+                    <img src={logo} alt="logo"/>
+                </Grid>
+            </Grid>
 
-        </div>
+            <Grid item container direction={"row-reverse"}>
+                <Grid item >
+                    <Button variant={"contained"} >
+                        Button
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
     );
 }
 
